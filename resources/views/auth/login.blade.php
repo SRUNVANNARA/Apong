@@ -4,6 +4,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
+            <div class="alert alert-info"​ style="font-size: 19px;">លោក​អ្នកអាច​បញ្ចេញ​មតិ ឬក៏​អាច​ផ្ញើ​សារ​ទៅ​កាន់ <strong>mail@asvet.net</strong> សម្រាប់​ព័ត៌មាន​ត្រឡប់​ផ្សេងៗ ។</div>
             <div class="card">
                 <div class="card-header">{{ __('Login') }}</div>
 

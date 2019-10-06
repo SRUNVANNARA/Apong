@@ -1,4 +1,4 @@
-<!Doctype html>
+<!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
@@ -6,6 +6,24 @@
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
+
+
+        <title>អាប៉ោង - កម្មវិធី​ហ្គេម​អាប៉ោង - Apong - Apong Game</title>
+        <meta name="description" content="កម្មវិធី​អាប៉ោង​នេះ​ជា​កម្មវិធី​កម្សាន្ត​មួយ​ដែល​ផ្ដល់​នូវ​លទ្ធផល​ចៃដន្យ​ពី​លេខ​ ១ ដល់ ៦ ។ដូច្នេះ​វា​ផ្ដល់​នូវ​ភាព​យុត្តិធម៌​សម្រាប់​អ្នក​លេង​ មិន​ថា​មេ ឬ​អ្នក​ចាក់​ឡើយ ។ សូម​អរគុណ សូម​សំណាងល្អ ។">
+        <meta http-equiv="content-type" content="text/html;charset=UTF-8">
+
+        <script type="application/ld+json">
+            {
+              "@context" : "http://schema.org",
+              "@type" : "Product",
+              "name" : "អាប៉ោង",
+              "image" : "https://asvet.net/storage/images/result-board.png",
+              "brand" : {
+                "@type" : "Brand",
+                "logo" : "https://asvet.net/storage/images/h6.png"
+              }
+            }
+        </script>
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
@@ -17,6 +35,7 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 
     <style>
 
@@ -40,7 +59,7 @@
                         {{ config('app.name', 'Laravel') }}
                     </a>
                 @else
-                    <a class="navbar-brand" href="{{ url('/welcome') }}">
+                    <a class="navbar-brand" href="{{ url('/') }}">
                         {{ config('app.name', 'Laravel') }}
                     </a>
                 @endauth
@@ -60,20 +79,20 @@
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('ចូល') }}</a>
+                                <a class="nav-link" href="{{ route('login') }}"><i class="fa fa-star" aria-hidden="true" style="color:green"></i>{{ __(' វាយតម្លៃកម្មវិធី') }}</a>
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">
 {{--                                    <a class="nav-link" href="{{ route('register') }}">{{ __('ចុះឈ្មោះ') }}</a>--}}
                                 </li>
-                                <a class="nav-link" href="/about">{{ __('អំពីកម្មវិធី') }}</a>
+                                <a class="nav-link" href="/about"><i class="fa fa-info-circle" aria-hidden="true" style="color:green"></i>{{ __(' អំពីកម្មវិធី') }}</a>
                             @endif
                         @else
                             <li>
                                 <a class="nav-link" href="{{ route('logout') }}"
                                    onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                    {{ __('ចេញ') }}
+                                    <i class="fa fa-star" aria-hidden="true" style="color:blue"></i>{{ __(' វាយតម្លៃកម្មវិធី') }}
                                 </a>
 
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -81,7 +100,7 @@
                                 </form>
                             </li>
                         <li>
-                            <a class="nav-link" href="/about">{{ __('អំពីកម្មវិធី') }}</a>
+                            <a class="nav-link" href="/about"><i class="fa fa-info-circle" aria-hidden="true" style="color:green"></i>{{ __(' អំពីកម្មវិធី') }}</a>
                         </li>
 {{--                            <li class="nav-item dropdown">--}}
 {{--                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>--}}
